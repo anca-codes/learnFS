@@ -1,20 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head : metadata of the website -->
 <head>
-    <title>My Mini Site</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <title>Daily Food Diary</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('imageindex.png'); /* Înlocuiește cu calea către imaginea ta */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Amatic SC', cursive;
+            font-size: 3.5rem;
+            color: #FF69B4;
+            margin-bottom: 20px;
+        }
+
+        .meal-section {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .breakfast {
+            background-color: #FFD1DC;
+            border-left: 5px solid #FF69B4;
+        }
+
+        .lunch {
+            background-color: #D1F2EB;
+            border-left: 5px solid #1ABC9C;
+        }
+
+        .dinner {
+            background-color: #FDEBD0;
+            border-left: 5px solid #F39C12;
+        }
+
+        .meal-section h2 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 1.5rem;
+            color: #FF69B4;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .meal-section textarea,
+        .meal-section .details input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .meal-section textarea:focus,
+        .meal-section .details input:focus {
+            outline: none;
+            border-color: inherit;
+        }
+
+        .breakfast textarea:focus,
+        .breakfast .details input:focus {
+            box-shadow: 0 0 10px 3px rgba(255, 105, 180, 0.6); /* Roz sclipici */
+            border-color: #FF69B4;
+        }
+
+        .lunch textarea:focus,
+        .lunch .details input:focus {
+            box-shadow: 0 0 10px 3px rgba(26, 188, 156, 0.6); /* Verde sclipici */
+            border-color: #1ABC9C;
+        }
+
+        .dinner textarea:focus,
+        .dinner .details input:focus {
+            box-shadow: 0 0 10px 3px rgba(243, 156, 18, 0.6); /* Portocaliu sclipici */
+            border-color: #F39C12;
+        }
+
+        .meal-section .details {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .meal-section .details input {
+            flex: 1;
+        }
+    </style>
 </head>
-<!-- Body : content of the website -->
 <body>
-    <h1>My Mini Site</h1>
-    <p>Welcome to my mini site!</p>
-    <p>Choose a page</p>
-    <p>Thank you for visiting!</p>
-    <!-- Navigation : links to other pages -->
-    <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="container">
+        <h1>Daily Food Diary</h1>
+        <div class="meal-section breakfast">
+            <h2>Breakfast</h2>
+            <textarea placeholder="What did you eat?"></textarea>
+            <div class="details">
+                <input type="time" placeholder="Time" name="breakfast-time">
+                <input type="number" placeholder="Glucose Before" name="breakfast-glucose-before">
+                <input type="number" placeholder="Glucose After 2 Hours" name="breakfast-glucose-after">
+            </div>
+        </div>
+        <div class="meal-section lunch">
+            <h2>Lunch</h2>
+            <textarea placeholder="What did you eat?"></textarea>
+            <div class="details">
+                <input type="time" placeholder="Time" name="lunch-time">
+                <input type="number" placeholder="Glucose Before" name="lunch-glucose-before">
+                <input type="number" placeholder="Glucose After 2 Hours" name="lunch-glucose-after">
+            </div>
+        </div>
+        <div class="meal-section dinner">
+            <h2>Dinner</h2>
+            <textarea placeholder="What did you eat?"></textarea>
+            <div class="details">
+                <input type="time" placeholder="Time" name="dinner-time">
+                <input type="number" placeholder="Glucose Before" name="dinner-glucose-before">
+                <input type="number" placeholder="Glucose After 2 Hours" name="dinner-glucose-after">
+            </div>
+        </div>
+    </div>
 </body>
 </html>

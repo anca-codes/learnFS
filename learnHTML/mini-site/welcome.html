@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Food Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('imagewelcome.png'); /* Calea relativă către imagine */
+            background-color: #fefefe;
+            background-size: cover; /* Acoperă întreaga pagină */
+            background-repeat: no-repeat; /* Nu repeta imaginea */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .welcome-container {
+            text-align: center;
+            background: rgba(255, 255, 255); /* Fundal alb semi-transparent */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 4rem;
+            color: #FF69B4;
+            margin: 0;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 10px 0 20px;
+        }
+        .start-button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #FFB6C1;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .start-button:hover {
+            background-color: #FF69B4;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>My 90 Day Food Journal</h1>
+        <p>Track your meals, health goals, and progress!</p>
+        <a href="index.html" class="start-button">Get Started</a>
+    </div>
+</body>
+</html>
